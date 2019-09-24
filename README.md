@@ -9,7 +9,7 @@
 
 1. Crear un ambiente virtual
 2. Clonar el proyecto en el ambiente virtual
-3. Ejecutar el siguiente comando para instalar los paquetes inciales del proyecto
+3. Instalar dependencias de Python:
     ```
         pip install -r requirements.txt
    ```

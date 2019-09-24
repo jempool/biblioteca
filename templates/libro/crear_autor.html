@@ -1,28 +1,21 @@
-<!doctype html>
+{% extends 'index.html' %}
 
-<html lang="es">
-<head>
-  <meta charset="utf-8">
+{% block titulo %}
+Creación de autores
+{% endblock titulo %}
 
-  <title>Creacion de autor</title>
-  <meta name="description" content="Document">
-  <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+{% block body%}
 
-</head>
-
-<body>
 <form method="POST">
-    
-    {% csrf_token %}
-    {{ autor_form.as_p }}
-    
-    <button type = "submit">
-        crear
-    </button>
+
+  {% csrf_token %}
+  {{ autor_form.as_p }}
+
+  <button type="submit">
+    crear
+  </button>
 
 </form>
-</body>
 
-</html>
+{% endblock body%}
