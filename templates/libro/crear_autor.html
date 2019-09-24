@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>Creacion de autor</title>
+  <meta name="description" content="Document">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+<form method="POST">
+    
+    {% csrf_token %}
+    {{ autor_form.as_p }}
+    
+    <button type = "submit">
+        crear
+    </button>
+
+</form>
+</body>
+
+</html>

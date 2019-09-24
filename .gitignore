@@ -3,5 +3,7 @@
 .vscode/
 .idea/
 
+*__pycache__/
+
 media/
 static_collected/
