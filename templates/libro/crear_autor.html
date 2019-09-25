@@ -10,11 +10,16 @@ Creación de autores
 <form method="POST">
 
   {% csrf_token %}
-  {{ autor_form.as_p }}
 
-  <button type="submit">
-    crear
-  </button>
+  {% if error %}
+    <h2>{{ error }}</h2>
+
+  {% else %}
+    {{ autor_form.as_p }}
+    <button type="submit"> crear </button>
+
+  {% endif %}
+
 
 </form>
 
