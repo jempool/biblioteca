@@ -20,7 +20,7 @@ def crearAutor(request):
 
 
 def listarAutor(request):
-    autores = Autor.objects.all()
+    autores = Autor.objects.filter(estado = True)
     return render(request, 'libro/listar_autor.html', {'autores': autores})
 
 
@@ -43,6 +43,19 @@ def editarAutor(request, id):
 
     except ObjectDoesNotExist as identifier:
         error = identifier
-
     
     return render(request, 'libro/crear_autor.html', {'autor_form': autor_form, 'error': error })
+
+
+def eliminarAutor(request, id):
+    
+    autor = Autor.objects.get(id = id)
+    
+    if request.method == 'POST':
+        # without post
+        # autor.delete()
+        autor.estado = False
+        autor.save()
+        return redirect('libro:listar_autor')
+        #~
+    return render(request, 'libro/eliminar_autor.html', {'autor': autor})
