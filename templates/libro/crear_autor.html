@@ -15,7 +15,21 @@ Creación de autores
     <h2>{{ error }}</h2>
 
   {% else %}
-    {{ autor_form.as_p }}
+
+    <!--    {{ autor_form.as_p }}    -->
+
+    <label>Nombre</label>
+    <input type="text" name="nombre"></input>
+  
+    <label>Apellidos</label>
+    <input type="text" name="apellidos"></input>
+  
+    <label>Nacionalidad</label>
+    <input type="text" name="nacionalidad"></input>
+  
+    <label>Descripción</label>
+    <input type="text" name="descripcion"></input>
+  
     <button type="submit"> crear </button>
 
   {% endif %}

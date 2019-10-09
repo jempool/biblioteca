@@ -7,3 +7,5 @@
 
 media/
 static_collected/
+
+*migrations/
